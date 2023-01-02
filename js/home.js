@@ -1,7 +1,7 @@
 /*生成6位隨機數*/
 
-$(document).ready(function(){ 
-  
+$(document).ready(function(){
+
     $('#AllHotel').click(function(){
         console.log("AllHotel click");
         $.ajax({
@@ -95,6 +95,9 @@ function MakeHotelCard(index, hotel)
                                         <option value="5"> 5 ⭐</option>
                                     </select>
                                 </div> 
+                                <button id="confirmRate" class="btn btn-info">
+                                  確認評價
+                                </button>
                             <div>
                         </div>
                       </div>

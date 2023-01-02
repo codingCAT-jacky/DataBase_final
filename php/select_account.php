@@ -7,11 +7,17 @@
 	$error= $stmt->execute(array($Account));
 	$result = $stmt->fetchAll();
 	//以上寫法是為了防止「sql injection」
-	$users = array();
-	for($i=0; $i<count($result); $i++){
-		$users[$i]=array("Account" => $result[$i]['Account'],"Password" => $result[$i]['Password']);	
-		
-	}
-	header('Content-Type: application/json; charset=utf-8');
-	echo json_encode($users,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+
+    $AccountArray = array();
+	if(count($result)==0){   
+        echo"error";   
+    }
+    else{
+        for($i=0; $i<count($result); $i++){
+            $sigleAccount  = array( 'Account'  =>  $result[$i]['Account'] );
+            $AccountObject json_encode ( $sigleAccount ,  JSON_FORCE_OBJECT );
+            $AccountArray[] = $AccountObject;
+        }
+    }
+    echo json_encode($AccountArray);
 	?>

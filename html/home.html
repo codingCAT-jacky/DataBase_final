@@ -12,25 +12,18 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/signUp.js"></script>
-  <script src="/js/login.js"></script>
+  
   <script src="/js/home.js"></script>
   <div class="offcanvas offcanvas-start" id="demo">
     <div class="offcanvas-header">
-      <div style="height: 100px; width: 100px;">
-        <img src="https://media.istockphoto.com/id/1209654046/zh/%E5%90%91%E9%87%8F/%E4%BD%BF%E7%94%A8%E8%80%85%E9%A0%AD%E5%83%8F%E8%A8%AD%E5%AE%9A%E6%AA%94%E5%9C%96%E7%A4%BA%E9%BB%91%E8%89%B2%E5%90%91%E9%87%8F%E6%8F%92%E5%9C%96.jpg?s=612x612&w=0&k=20&c=yKX7vnq5iFjvoTMHv0PjFr5rqK2_7ASbL843OlW4p9A=" 
-        style="width: 100px; height: 100px" alt="User Photo">
-      </div>          
-      <div >
-        <p class="offcanvas-title" id = "status">未登入</p>
-      </div> 
+      <h1 class="offcanvas-title">功能選單</h1>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
     </div>
-    <div class="offcanvas-body"> 
-      
-      <div>        
+    <div class="offcanvas-body">
+      <div>
         <a class="btn btn-outline-warning" href="favorite.html" id="favorite"
-          style="margin-top: 10px; width: 250px;">我的最愛</a>           
+          style="margin-top: 10px; width: 250px;">我的最愛</a>
+           
       </div>
       <div>
         <a class="btn btn-outline-info" href="evaluation.html" id="evaluation"
@@ -40,14 +33,10 @@
         <button class="btn btn-outline-danger" type="button" id="signUp" style="margin-top: 50px; width: 250px;"
           data-bs-toggle="modal" data-bs-target="#signUpBackdrop">註冊</button>
       </div>
-      <div>
-        <button class="btn btn-outline-success" type="button" id="login" style="margin-top: 50px; width: 250px;"
-          data-bs-toggle="modal" data-bs-target="#LoginBackdrop">登入</button>
-      </div>
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-black">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
       <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
         🧳
@@ -59,10 +48,10 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="navbar-brand" id="AllSight" href="#" id="AllSight">景點</a>
+            <a class="navbar-brand" id="AllSight" href="#" id="sights1">景點</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" id="AllHotel" href="#" id="AllHotel">飯店</a>
+            <a class="navbar-brand" id="AllHotel" href="#" id="hotels">飯店</a>
           </li>
 
         </ul>
@@ -115,37 +104,7 @@
       </div>
     </div>
   </div>
-  <div id="LoginButton"style="margin-top: 10px;">
-    <div class="modal fade" id="LoginBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">登入</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="Account" class="col-form-label">帳戶:</label>
-                            <input type="text" class="form-control" id="loginAccount">
-                        </div>
-                        <div class="mb-3">    
-                            <label for="Password" class="col-form-label">密碼:</label>                                
-                            <input type="password" class="form-control" id="loginPassword"></p>
-                        </div>
-                        
-                        
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="LoginBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 </body>
 
 

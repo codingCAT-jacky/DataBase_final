@@ -1,11 +1,7 @@
 /*生成6位隨機數*/
 
 $(document).ready(function () {
-  $("#back").click(function () {
 
-    location.href="/home.html";
-
-  });
     $.ajax({
         type: 'GET',
         url: '/php/select_tourist.php',

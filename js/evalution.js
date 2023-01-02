@@ -1,11 +1,7 @@
 /*生成6位隨機數*/
 
 $(document).ready(function(){
-  $("#back").click(function () {
 
-    location.href="/home.html";
-
-  });
     $('#hotelRate').click(function(){
         console.log("AllHotel click");
         $.ajax({
