@@ -55,7 +55,7 @@ function MakeHotelCard(index, hotel)
                         地區:${hotel.Zone}</br>
                         評價:${hotel.StarNum} &#11088;
                     </span>
-                    <a href=${mapURL} class="btn btn-info btn-sm col-3">
+                    <a href=${mapURL} class="btn btn-info col-3">
                         地址
                     </a>
                 </div>
@@ -85,8 +85,8 @@ function MakeHotelCard(index, hotel)
                         <div class="card-footer">
                             <div class="row">
                                 <span class="col-4 ps-3 fs-4">留下評價:</span>
-                                <div class="offset-3 col-4">
-                                <div class="input-group">
+                                <div class="col-4 ">
+                                  <div class="input-group">
                                     <select class="form-select" id="evaluation" onchange="selectOnchange_evaluation(this)">
                                         <option value="1"> 1 ⭐</option>
                                         <option value="2"> 2 ⭐</option>
@@ -94,8 +94,9 @@ function MakeHotelCard(index, hotel)
                                         <option value="4"> 4 ⭐</option>
                                         <option value="5"> 5 ⭐</option>
                                     </select>
-                                </div> 
-                                <button id="confirmRate" class="btn btn-info">
+                                  </div> 
+                                </div>
+                                <button id="confirmRate" class="btn btn-info btn-sm col-3 ms-3">
                                   確認評價
                                 </button>
                             <div>
@@ -158,21 +159,20 @@ function MakeSightCard(index, sight)
     $("#result").append(finalcard);
 }
 
+//記錄下選擇了幾顆星
 function selectOnchange_evaluation(selectRate)
 {
-    // if(selectPriceFnc.selectedIndex==0)
-    // {
-    //     PriceFrom="0";
-    //     PriceTo="100";
-    // }
-    // else if(selectPriceFnc.selectedIndex==4)
-    // {
-    //     PriceFrom="1000";
-    //     PriceTo="1000+";
-    // }
-    // else
-    // {
-    //     PriceFrom=selectPriceFnc.options[(selectPriceFnc.selectedIndex-1)].value;
-    //     PriceTo=selectPriceFnc.options[selectPriceFnc.selectedIndex].value;
-    // }
+    if(selectRate.selectedIndex==0)
+    {
+        
+    }
+    else if(selectRate.selectedIndex==4)
+    {
+        
+    }
+    else
+    {
+        PriceFrom=selectPriceFnc.options[(selectPriceFnc.selectedIndex-1)].value;
+        PriceTo=selectPriceFnc.options[selectPriceFnc.selectedIndex].value;
+    }
 }
